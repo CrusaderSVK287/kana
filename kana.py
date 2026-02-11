@@ -10,11 +10,11 @@ romaji_to_hira = {
     "ta":"た","chi":"ち","tsu":"つ","te":"て","to":"と",
     "na":"な","ni":"に","nu":"ぬ","ne":"ね","no":"の",
     "ha":"は","hi":"ひ","fu":"ふ","he":"へ","ho":"ほ",
-   # "ma":"ま","mi":"み","mu":"む","me":"め","mo":"も",
-    #"ya":"や","yu":"ゆ","yo":"よ",
+    "ma":"ま","mi":"み","mu":"む","me":"め","mo":"も",
+    "ya":"や","yu":"ゆ","yo":"よ",
 #    "ra":"ら","ri":"り","ru":"る","re":"れ","ro":"ろ",
  #   "wa":"わ","wi":"ゐ", "we":"ゑ", "wo":"を",
-  #  "n":"ん",
+    "n":"ん",
     # Voiced sounds...
     # "ga":"が","gi":"ぎ","gu":"ぐ","ge":"げ","go":"ご",
     # "za":"ざ","ji":"じ","zu":"ず","ze":"ぜ","zo":"ぞ",
@@ -170,6 +170,7 @@ def main():
         print("4 - Katakana → Romaji (exercise)")
         print("")
         print("5 - Show romaji → Kana chart")
+        print("6 - Help")
         print("0 - Quit")
 
         choice = input().strip()
@@ -186,6 +187,23 @@ def main():
             print_romaji_table(romaji_to_hira)
             print("")
             print_romaji_table(romaji_to_kata)
+        elif choice == "6":
+            print("2 types of exercises available for both Hiragana (ひらがな) and Katakana (カタカナ).")
+            print("Romaji to Kana:")
+            print("\tYou will be given a string of romaji syllabels")
+            print("\tWrite them out on paper, then press enter to show")
+            print("\tthe answer and compare. Example:")
+            print("\tka shi mi nu ma")
+            print("\tCorrect answer: かしみぬま")
+            print("Kana to Romaji:")
+            print("\tYou will be given a string of Kana syllabels")
+            print("\tWrite them in romaji to the terminal, then press enter. Example:")
+            print("\tさおせしめ")
+            print("\tCorrect answer: sa o se shi me")
+            print("\nShow romaji → Kana chart")
+            print("\tPrints the table of the Kana that will be used")
+            print("\tin eighter type of exercise. Add more kana by")
+            print("\tuncommenting lines of the array at the top of kana.py")
         elif choice == "0":
             break
         else:
