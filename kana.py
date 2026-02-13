@@ -12,8 +12,9 @@ romaji_to_hira = {
     "ha":"は","hi":"ひ","fu":"ふ","he":"へ","ho":"ほ",
     "ma":"ま","mi":"み","mu":"む","me":"め","mo":"も",
     "ya":"や","yu":"ゆ","yo":"よ",
-#    "ra":"ら","ri":"り","ru":"る","re":"れ","ro":"ろ",
- #   "wa":"わ","wi":"ゐ", "we":"ゑ", "wo":"を",
+    "ra":"ら","ri":"り","ru":"る","re":"れ","ro":"ろ",
+    #"wa":"わ","wi":"ゐ", "we":"ゑ", "wo":"を",
+    "wa":"わ", "wo":"を",
     "n":"ん",
     # Voiced sounds...
     # "ga":"が","gi":"ぎ","gu":"ぐ","ge":"げ","go":"ご",
@@ -40,6 +41,10 @@ def print_romaji_table(mapping, cols=5):
 
         # Insert two empty slots after ya and yu
         if k in ("ya", "yu", "wi"):
+            display_items.append((None, None))
+        if k in ("wa", "xx"):
+            display_items.append((None, None))
+            display_items.append((None, None))
             display_items.append((None, None))
 
     for i in range(0, len(display_items), cols):
